@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <title>Genshin Impact Photo Library</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Genshin Gallery</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-box">
+    <h1>Genshin Impact<br>Photo Library</h1>
+    <p>Discover curated characters, wallpapers, and cute moments.</p>
+    <a href="#gallery" class="btn-primary">Browse Gallery</a>
+  </div>
+</section>
+
+<!-- Subscribe -->
+
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery-section">
+  <h2>Gallery</h2>
+
+  <!-- FILTER -->
+  <div class="filter-bar">
+  <button data-key="all" class="active">All</button>
+  <button data-key="archon">Archons</button>
+  <button data-key="hydro">Hydro</button>
+  <button data-key="pyro">Pyro</button>
+  <button data-key="electro">Electro</button>
+  <button data-key="cryo">Cryo</button>
+  <button data-key="anemo">Anemo</button>
+  <button data-key="geo">Geo</button>
+  <button data-key="dendro">Dendro</button>
+</div>
+
+
+<div class="search-bar">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search character (e.g. Furina, Raiden Shogun...)"
+    autocomplete="off">
+  <ul id="suggestions"></ul>
+</div>
+
+
+  <!-- GRID -->
+   
+  <div class="gallery">
+    <div class="img-card" data-keywords="cloumbina archon hydro wanderer durine animo pyro">
+      <img src="images/colambina2026.jpg" loading="lazy">
+      <span class="tag">columbina</span>
+    </div>
+    <div class="img-card" data-keywords="cloumbina archon hydro wanderer durine animo pyro">
+      <img src="images/bula.jpg" loading="lazy">
+      <span class="tag">columbina</span>
+    </div>
+    <div class="img-card" data-keywords="cloumbina archon hydro">
+      <img src="images/2026.jpg" loading="lazy">
+      <span class="tag">Archon Quest</span>
+    </div>
+    <div class="img-card" data-keywords="varesa xiloen mc ather lumain event 6.2 paimon">
+      <img src="images/6.2-event.png" loading="lazy">
+      <span class="tag">6.2-event</span>
+    </div>
+     <div class="img-card" data-keywords="Nicole alice pyro">
+      <img src="images/Nicole1.png" loading="lazy">
+      <span class="tag">Nicole</span>
+    </div>
+    <div class="img-card" data-keywords="cloumbina archon hydro ineffa aino paimon mc ather lumain ">
+      <img src="images/columbina67.png" loading="lazy">
+      <span class="tag">cloumbina</span>
+    </div>
+    <div class="img-card" data-keywords="cloumbina archon hydro  ">
+      <img src="images/columbina6.png" loading="lazy">
+      <span class="tag">cloumbina</span>
+    </div>
+   <div class="img-card" data-keywords="cloumbina archon hydro  ">
+      <img src="images/columbina5.png" loading="lazy">
+      <span class="tag">cloumbina</span>
+    </div>
+    <div class="img-card" data-keywords="cloumbina archon hydro sandrone">
+      <img src="images/columbina-bonk.png" loading="lazy">
+      <span class="tag">cloumbina</span>
+    </div>
+     <div class="img-card" data-keywords="cloumbina archon hydro sandrone book ">
+      <img src="images/columbina-book.png" loading="lazy">
+      <span class="tag">cloumbina book</span>
+    </div>
+    <div class="img-card" data-keywords="cloumbina archon hydro sandrone">
+      <img src="images/columbina-vs-sandrone.png" loading="lazy">
+      <span class="tag">sandrone</span>
+    </div>
+
+    <div class="img-card" data-keywords="cloumbina archon hydro durine wanderer">
+      <img src="images/columbina3.png" loading="lazy">
+      <span class="tag">cloumbina</span>
+    </div>
+
+     <div class="img-card" data-keywords="cloumbina archon hydro moon Arlecchino nefer jahoda">
+      <img src="images/columbina4.png" loading="lazy">
+      <span class="tag">cloumbina</span>
+    </div>
+
+    <div class="img-card" data-keywords="lauma nefer cloumbina archon">
+     <img src="images/AQ-ss.png" loading="lazy">
+      <span class="tag">Archon Quest</span>
+    </div>
+
+    <div class="img-card" data-keywords="alice pyro">
+      <img src="images/Alice.png" loading="lazy">
+      <span class="tag">Alice</span>
+    </div>
+    <div class="img-card" data-keywords="furina hydro alice">
+      <img src="images/furina-summon.jpg" loading="lazy">
+      <span class="tag">Furina</span>
+    </div>
+    <div class="img-card" data-keywords="alice pyro">
+      <img src="images/Alice2.png" loading="lazy">
+      <span class="tag">Alice</span>
+    </div>
+    <div class="img-card" data-keywords="cloumbina archon hydro">
+      <img src="images/columbina1.png" loading="lazy">
+      <span class="tag">cloumbina</span>
+    </div>
+
+    <div class="img-card" data-keywords="cloumbina archon hydro">
+      <img src="images/columbina2.png" loading="lazy">
+      <span class="tag">cloumbina</span>
+    </div>
+  </div>
+</section>
+<p id="emptyState" class="empty-state">
+  No images found for this search.
+</p>
+
+
+
+<!-- IMAGE MODAL -->
+<div class="modal" id="imageModal">
+  <button class="modal-close" aria-label="Close">&times;</button>
+  <img class="modal-img" id="modalImg">
+</div>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p class="footer-text">
+      This webpage is created and maintained by <strong>Anos 97 Team</strong>
+    </p>
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/ig_anosvoldigoad/" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com/@anos97tamil" target="_blank">YouTube</a>
+      <a href="https://www.twitch.tv/anos97tamil" target="_blank">Twitch</a>
+      <a href="https://discord.com/invite/JBHeaQn" target="_blank">Discord</a>
+      <a href="https://x.com/igAnosVoldigoad" target="_blank">Twitter</a>
+    </div>
+  </div>
+</footer>
+</footer>
+
+<!-- CUTE FOX VIDEO CARD -->
+<!-- CUTE FOX AUTO VIDEO -->
+<div class="fox-card">
+  <video
+    id="foxVideo"
+    src="video/Untitled design (1).mp4"
+    poster="images/miko-poster.png"
+    muted
+    autoplay
+    loop
+    playsinline>
+  </video>
+
+  <div class="fox-actions">
+    <a
+      href="https://www.youtube.com/@anos97tamil"
+      target="_blank"
+      class="fox-subscribe">
+      💗 Subscribe
+    </a>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+  
